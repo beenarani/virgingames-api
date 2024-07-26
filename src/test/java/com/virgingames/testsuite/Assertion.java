@@ -11,22 +11,22 @@ import org.junit.runner.RunWith;
 import static org.hamcrest.Matchers.*;
 
 @RunWith(SerenityRunner.class)
-public class JackPotAssertionTest extends TestBase {
+public class Assertion extends TestBase {
 
     @Steps
     JackpotSteps jackpotSteps;
 
 
-    @Title("Test001- Verify Currency is GBP")
+    @Title("Verify Currency is GBP")
     @Test
     public void test001() {
         jackpotSteps.getJackpotInfo().body("data.pots.currency", everyItem(equalTo("GBP")));
     }
 
-    @Title("Test002- Verify Jackpot id is Bingo")
+    @Title("Verify Jackpot id is ROXOR")
     @Test
     public void test002(){
-        jackpotSteps.getJackpotInfo().body("data.jackpotId",equalTo("Bingo"));
+        jackpotSteps.getJackpotInfo().body("data.jackpotId",equalTo("Roxor Progressives"));
     }
 
 

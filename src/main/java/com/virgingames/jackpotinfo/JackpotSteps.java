@@ -7,12 +7,12 @@ import net.serenitybdd.rest.SerenityRest;
 
 public class JackpotSteps {
 
-    @Step("Get jackpot information by id-Bingo")
+    @Step("Get jackpot information by id-ROXOR")
     public ValidatableResponse getJackpotInfo(){
         return SerenityRest.given().
                 queryParams("currency","GBP")
                 .when()
-                .get(EndPoints.GET_JACKPOT_BINGO)
+                .get(EndPoints.GET_JACKPOT_ROXOR)
                 .then();
     }
 }
